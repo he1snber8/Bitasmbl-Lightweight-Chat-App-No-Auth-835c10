@@ -1,0 +1,1 @@
+import React,{useState,useEffect}from 'react';import {io}from 'socket.io-client';export default function App(){const[socket,setSocket]=useState(null);useEffect(()=>{const s=io('http://localhost:3000');setSocket(s);return()=>s.disconnect();},[]);return(<div>Chat App</div>);}
