@@ -1,0 +1,1 @@
+import React from 'react';export default function ChatRoom({messages,onSend}){return(<div><div>{messages.map((m,i)=><div key={i}>{m}</div>)}</div><form onSubmit={e=>{e.preventDefault();const v=e.target.msg.value;onSend(v);e.target.msg.value='';}}><input name="msg"/></form></div>);}
